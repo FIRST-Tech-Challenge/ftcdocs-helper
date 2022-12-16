@@ -5,7 +5,7 @@ from sphinx.errors import ExtensionError
 
 
 def add_cb_javascript(app, pagename, templatename, context, doctree):
-    if not app.config.googleanalytics_enabled:
+    if not app.config.cookiebanner_enabled:
         return
 
     metatags = context.get('metatags', '')
