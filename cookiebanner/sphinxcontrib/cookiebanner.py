@@ -6,6 +6,9 @@ from sphinx.errors import ExtensionError
 
 def add_cb_javascript(app, pagename, templatename, context, doctree):
     if not app.config.cookiebanner_enabled:
+        metatags_string = context.get('metatags','')
+        headercode = """ <!-- Cookie Banner Intentionally Disabled --> """
+        context['metatags'] = metatags_string + headercode
         return
     
     # Embed code into the header, using the "metatags" space.
