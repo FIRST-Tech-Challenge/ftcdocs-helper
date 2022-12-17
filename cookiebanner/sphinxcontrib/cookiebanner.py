@@ -37,7 +37,7 @@ def add_cb_javascript(app, pagename, templatename, context, doctree):
              "theme": "classic",
              "position": "top",
              "content": {
-                "message": "This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with the &lt;i&gt;FIRST&lt;/i&gt; Privacy Policy.",
+                "message": "This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with the <i>FIRST</i> Privacy Policy.",
                 "href": "https://www.firstinspires.org/about/privacy-policy"
              }
           });
