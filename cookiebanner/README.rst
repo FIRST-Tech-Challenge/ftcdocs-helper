@@ -10,7 +10,9 @@ About
 =====
 
 This extensions allows you to add a cookie banner to 
-your website using a HubSpot javascript popup.
+your website. This uses the Cookie Consent code found
+here:  
+https://www.osano.com/cookieconsent/documentation/about-cookie-consent/
 
 Enabling the extension in Sphinx_
 ---------------------------------
