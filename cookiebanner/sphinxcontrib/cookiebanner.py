@@ -40,7 +40,7 @@ def add_cb_javascript(app, pagename, templatename, context, doctree):
           });
        </script>
     """
-    context['body'] += body_string + bodycode
+    context['body'] = body_string + bodycode
 
     
 def setup(app):
