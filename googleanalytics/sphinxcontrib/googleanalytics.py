@@ -6,6 +6,9 @@ from sphinx.errors import ExtensionError
 
 def add_ga_javascript(app, pagename, templatename, context, doctree):
     if not app.config.googleanalytics_enabled:
+        metatags = context.get('metatags', '')
+        metatags += """ <!-- Google Analytics Intentionally Disabled --> """
+        context['metatags'] = metatags
         return
 
     metatags = context.get('metatags', '')
