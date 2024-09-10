@@ -53,7 +53,8 @@ class LinkCheckerDiffBuilder(CheckExternalLinksBuilder):
                     "lineno": error.lineno,
                     "status": error.status,
                     "message": error.message,
-                    "code": error.code
+                    "code": error.code,
+                    "new": error.uri not in self.previous_errors
                 }
                 for error in self.current_errors
             ]
@@ -68,6 +69,7 @@ class LinkCheckerDiffBuilder(CheckExternalLinksBuilder):
         if new_errors:
             self.app.statuscode = 1
             logger.error(bold(red('Found new errors. Build failed.')))
+            logger.error(red(str([error.uri for error in new_errors])))
         else:
             logger.info(bold(green('No new errors found. Build successful.')))
 
