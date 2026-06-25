@@ -85,7 +85,7 @@ class LinkCheckerDiffBuilder(CheckExternalLinksBuilder):
         self.write_output()
 
     def create_checker(self):
-        return HyperlinkAvailabilityChecker(self.env, self.config)
+        return HyperlinkAvailabilityChecker(self.config)
     
 class HyperlinkCollectorDiff(HyperlinkCollector):
     builders = ('linkcheckdiff',)
