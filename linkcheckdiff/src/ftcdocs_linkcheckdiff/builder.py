@@ -94,7 +94,7 @@ def setup(app: Sphinx) -> Dict[str, Any]:
     app.add_builder(LinkCheckerDiffBuilder)
     app.add_post_transform(HyperlinkCollectorDiff)
 
-    app.add_config_value('linkcheckdiff_errors', set(['redirected', 'broken']), [set])
+    app.add_config_value('linkcheckdiff_errors', set(['redirected', 'broken']), '', types=[set])
 
     return {
         'parallel_read_safe': True,
